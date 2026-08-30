@@ -57,8 +57,7 @@ function useReveals() {
 function Logo() {
   return (
     <span className="brand-mark" data-testid="brand-logo">
-      <span className="brand-symbol" aria-hidden="true"><span className="sr-only">Shua Strategies</span></span>
-      <span className="brand-word">Shua<span className="brand-sub">Strategies</span></span>
+      <img className="brand-logo-image" src="/shua-strategies-wordmark.png" alt="Shua Strategies" />
     </span>
   );
 }
@@ -102,7 +101,6 @@ function Footer() {
           <div>
             <Logo />
             <p className="muted" style={{ maxWidth: 290, marginTop: 20, lineHeight: 1.65, fontSize: 13 }}>A steadier way into medicine, from someone who has sat on both sides of the admissions table.</p>
-            <p className="placeholder-note" style={{ marginTop: 25 }}>LOGO PLACEHOLDER · replace with approved mark</p>
           </div>
           <div>
             <h3>Explore</h3>
