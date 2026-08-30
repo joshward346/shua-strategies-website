@@ -1,0 +1,76 @@
+# Replit Prompt — Shua Strategies Website
+
+Copy everything below the line into Replit Agent as your build prompt.
+
+---
+
+Build me a modern, mobile-responsive marketing website for **Shua Strategies**, an independent MCAT coaching and premed admissions advising business run by a physician. Use React (Vite) + Tailwind CSS for the frontend, deployed as a static/simple site (no backend database needed — this is a lead-gen site, not an app).
+
+## Business context (use this to guide tone and structure, don't dump it verbatim)
+
+- Founder: Shua (Josh Ward), MD — graduated WashU School of Medicine (Cornell undergrad), earned a full-tuition scholarship, scored 131/132 on MCAT CARS.
+- The business helps premed students prep for the MCAT and strengthen their med school applications.
+- The primary conversion goal of this site is to get visitors to **book a free 15-minute strategy call** (NOT to sell anything directly on the page — the paid offer, a $600 Strategy Intensive, is only pitched live on that call after Shua diagnoses the student's specific situation). So every CTA on the site should say something like "Book Your Free Strategy Call" — never "Buy Now" or "Book Your $600 Session."
+- Secondary conversion goal: get visitors to opt in with their email for one of five free lead magnets in exchange for joining the email list (which feeds a nurture sequence in MailerLite).
+- Tone: confident, warm, direct — talk to the student's stress/uncertainty about the MCAT and admissions process like someone who's been through it, not like a corporate test-prep company. Avoid generic "unlock your potential" filler copy.
+
+## Pages / structure
+
+1. **Home**
+   - Hero section: headline focused on the visitor's problem (MCAT anxiety, unclear strategy, wasted study time) rather than leading with credentials. Primary CTA button: "Book Your Free Strategy Call."
+   - A short "how it works" 3-step section: 1) Book a free call, 2) Get a personalized strategy, 3) Execute with support.
+   - A credibility strip further down the page (not the hero) mentioning WashU, Cornell, the 131/132 CARS score, and the full-tuition scholarship — framed as "why this advice is different," not as a bragging block.
+   - A lead magnet opt-in section ("Grab the free CARS Strategy Guide") with an email capture form.
+   - Closing CTA section repeating the free call booking button.
+
+2. **About / Meet Shua**
+   - Founder story in first person: the physician-in-training who cracked the code on CARS and admissions strategy. This is the one page where credentials can be front and center (full-tuition scholarship, 131/132 CARS, WashU, Cornell).
+   - Photo placeholder (I'll swap in a real headshot).
+
+3. **How I Help / Services**
+   - Explain the coaching approach at a high level (MCAT strategy, CARS-specific coaching, admissions strategy) without pricing details beyond noting there's a free strategy call to start.
+   - End with the free call CTA.
+
+4. **Free Resources (Lead Magnets)**
+   - A page listing all 5 free resources as cards, each with a short 1-2 sentence description and an email-gated download button:
+     1. CARS Strategy Guide
+     2. High-Yield Biology/Biochem Sheet
+     3. High-Yield Psych/Soc Sheet
+     4. High-Yield Chem/Physics Sheet
+     5. High-Yield [4th science subject] Sheet
+   - Each download should trigger an email capture form (embed MailerLite's form/embed code — leave a clearly marked placeholder `<!-- MAILERLITE EMBED GOES HERE -->` for each one so I can drop in my real MailerLite form snippets).
+
+5. **Book a Call**
+   - Dedicated booking page with an embedded Calendly widget (leave a placeholder `<!-- CALENDLY EMBED GOES HERE -->` for the real embed code) and 2-3 sentences setting expectations for the free 15-minute call (low-pressure, diagnostic, not a sales pitch).
+
+6. **Footer** (site-wide)
+   - Logo placeholder, nav links, contact email placeholder, and links to LinkedIn/Instagram (placeholder URLs I'll fill in).
+
+## Design direction
+
+- Clean, professional, a little warm — think "trusted physician-mentor," not "flashy test-prep bootcamp." Avoid neon colors, aggressive countdown timers, or hard-sell SaaS-style design patterns.
+- **Brand colors** (from the logo — use these as the palette, don't invent new ones):
+  - Deep navy: `#0B1B4D` (primary text, wordmark, headers)
+  - Royal blue: `#1E47D6` (accents, buttons, links, gradient highlight)
+  - White/off-white background: `#FFFFFF` or `#FAFAFA`
+  - Use a subtle navy-to-royal-blue gradient sparingly for accent elements (dividers, icon backgrounds, hover states) to echo the logo's monogram gradient — don't overdo it on body text or large blocks.
+- **Logo**: an interlocking double-S monogram in navy-to-blue gradient, paired with a serif small-caps wordmark "SHUA | STRATEGIES" and the tagline "Guiding the Next Generation of Physicians" underneath a small diamond divider. I'll upload the actual logo file — leave a clearly marked placeholder `<!-- LOGO GOES HERE -->` in the header/nav and footer.
+- **Typography**: pair a classic serif (for the logo wordmark / headings — something in the Playfair Display, Cormorant, or EB Garamond family) with a clean, legible sans-serif for body copy (Inter or similar). This should feel elegant/editorial, not corporate-SaaS.
+- Leave a placeholder for the founder headshot photo — I'll provide it.
+- Fully responsive — most premed traffic will come from Instagram/LinkedIn on mobile.
+
+## Integrations to stub out (I'll finish connecting these myself)
+
+- MailerLite embed forms on the Home page opt-in and every lead magnet card.
+- Calendly embed on the Book a Call page.
+- Google Analytics placeholder script tag in the site head.
+- Meta/Facebook Pixel placeholder script tag in the site head (I'm running Facebook Lead Ads separately via Zapier).
+- Basic SEO: page titles, meta descriptions, and Open Graph tags for each page (write reasonable defaults referencing MCAT coaching / premed admissions advising). The site's domain is **shuastrategies.com** — use it in canonical URL tags, Open Graph `og:url`, and anywhere else a full URL is expected.
+
+## What NOT to build
+
+- No pricing page and no "buy" flow anywhere on the site — the $600 offer is never mentioned by name or price on the public site, only pitched live on the call.
+- No blog/CMS for now — keep it static.
+- No user accounts, logins, or database.
+
+Once scaffolded, give me clear instructions for where in the code to (1) drop in my MailerLite embed codes, (2) drop in my Calendly embed code, (3) swap in my logo/photos/brand colors, and (4) point my existing domain at the deployed Replit site.

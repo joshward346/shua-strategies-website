@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Shua Strategies"
+description = "A warm, physician-led marketing website for Shua Strategies, helping premed students build a clear MCAT and medical school admissions strategy through free diagnostic calls and practical resources."
+version = "1.0.0"
+id = "artifacts/shua-strategies"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22498
+
+[services.development]
+run = "pnpm --filter @workspace/shua-strategies run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/shua-strategies", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/shua-strategies/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22498"
+BASE_PATH = "/"
