@@ -1,0 +1,82 @@
+# Replit Prompt — Shua Strategies Website (v2: Four-Tier Public Pricing)
+
+Copy everything below the line into Replit Agent as your build prompt. This replaces the earlier single-offer version — the business model has evolved to a public four-tier pricing ladder.
+
+---
+
+Build me a premium, conversion-oriented marketing website for **Shua Strategies**, a boutique MCAT and medical-school admissions advisory firm. Use React (Vite) + Tailwind CSS, deployed as a static site (no backend database needed — this is a lead-gen and sales site, not an app).
+
+**IMPORTANT: Before writing any code, give me your proposed sitemap, a section-by-section homepage wireframe, the visual design system, the CTA architecture, and the exact draft copy you propose using. Do not write code yet. I want to review and approve the plan first, then give you the go-ahead to build.**
+
+## Business context
+
+Shua Strategies is founded by **Joshua Ward, MD** — Cornell University graduate, MD from Washington University School of Medicine in St. Louis on a full-tuition scholarship, and a 99th percentile MCAT CARS score. The company provides individualized strategy, coaching, and advising for premedical students and medical school applicants.
+
+Core positioning idea: **ambitious students don't usually need more resources (UWorld, Anki, AAMC materials, prep books) — they need a strategy for using what they already have.** Shua Strategies provides that strategic layer: diagnosing what's actually going wrong, building a personalized plan, and coaching execution.
+
+**Brand feel:** premium, intelligent, personal, strategic, high-touch, boutique advisory firm — NOT a tutoring marketplace, NOT a giant test-prep company, NOT overly youthful/cutesy. Think elite academic coaching meets medical admissions expertise. Confident and warm, never salesy or high-pressure (no fake countdown timers, no manufactured urgency).
+
+**Critical honesty framing — read carefully:** This is an early-stage firm. Do NOT write copy that implies an established company with a large track record or a roster of past clients across all four programs. The honest, and actually compelling, positioning is: *"This is a young firm — I'm personally involved with every client I take on, and because I'm early, I can only take a limited number of people right now. That means the person you work with is getting my full, direct attention, not a junior associate."* This scarcity is real, not manufactured, and should read as a selling point (direct founder access) rather than an apology.
+
+**Proof/results framing:** Copy should frame outcomes as Joshua's personal track record, built over 5+ years of experience. A good framing pattern to use in copy: "Prior to founding Shua Strategies, I personally worked with students who went on to..." — this is honest and reads well without needing extra hedging or disclaimers around it beyond that.
+
+Real, confirmed outcomes to use:
+- **Experience & results (one combined credibility block, not split into a separate MCAT section)**: 5+ years of combined experience in college and medical school admissions advising and MCAT coaching (independent essay/application coaching since 2021, plus admissions coaching work with Ingenius Prep, Future Forward, and College Shortcuts since 2024). Joshua has personally worked with 40-50+ students across college and medical school admissions combined, and has a 99th percentile MCAT CARS score himself. Use this as a headline credibility stat (e.g., in the hero trust-indicator line and About page) alongside the medical pedigree (WashU MD, Cornell).
+- A standout result: a student Joshua worked with (case study name available, e.g. "Rahul") scored a **521** on the MCAT (99th+ percentile) — this student received full engagement support: MCAT strategy, AMCAS and TMDSAS application support, personal statement, and secondaries. Feature this as a detailed named case study — the depth of the story (start to finish, full application cycle) is a proof point, woven into the results/experience section rather than siloed into its own separate "MCAT" stats block.
+- Medical school acceptances (mix of paid work and free/personal-statement-only help at various points): NYU Grossman School of Medicine, Washington University School of Medicine in St. Louis, Icahn School of Medicine at Mount Sinai, Albert Einstein College of Medicine, UT Southwestern Medical School, University of New Mexico BA/MD Program, George Washington University School of Medicine — **and more**.
+- Undergraduate admissions (mix of free and paid work, some done through Ingenius Prep/Future Forward/College Shortcuts): Cornell University, Georgetown University, Tufts University, Carleton College, Tulane University, Macalester College, Occidental College, Pitzer College, Scripps College — **and more**.
+- **Formatting rule: every list of school acceptances anywhere on the site must end with "and more" (or equivalent phrasing like "among others") rather than presenting the list as exhaustive.** This is both more accurate (there are more than what's listed) and reads stronger than a capped list.
+- Do NOT state a specific MCAT student count anywhere on the site.
+
+## Offer architecture (four tiers, all pricing PUBLIC on the site)
+
+Organize as three conceptual pathways, not four identical stacked pricing cards:
+
+**MCAT Preparation**
+- *MCAT Strategy Intensive — $600.* A deep diagnostic + personalized MCAT roadmap (current performance analysis, content-gap assessment, resource sequencing, CARS strategy, full-length exam schedule, written study plan). Positioned as "leave knowing exactly what to do between now and test day," not "an hour of tutoring." CTA: "Book Your Strategy Intensive."
+- *MCAT Private Coaching — $2,000.* 10 hours of individualized coaching built on top of the strategy (CARS coaching, content remediation, full-length analysis, accountability). Positioned as ongoing performance coaching, not "10 tutoring hours."
+
+**Medical School Admissions**
+- *Complete Application Advising — $7,500.* Full-cycle support: applicant positioning/narrative, primary application (personal statement, activities, up to 3 review rounds), secondaries (up to 10 schools, up to 2 review rounds each — not unlimited), interview preparation (~3 sessions), and ~6 strategic advising sessions. Clearly scoped, not unlimited — additional schools/rounds available separately.
+
+**Comprehensive Premedical Advising**
+- *Future Physician Private Advising — $15,000. Limited to 5 active clients at a time · Application Required.* Longitudinal 9-12 month advising spanning academics/extracurricular strategy, MCAT, application, and interviews. No "Buy Now" button — instead an application flow: short application form → Joshua reviews → qualified applicants invited to a private consultation → enrollment.
+
+## Pages / structure
+
+1. **Home** — Hero (problem-focused headline + trust indicators: WashU MD · Cornell · 99th Percentile CARS · 5+ Years Experience), proof section (combined experience/results block: 5+ years, 40-50+ students, the 521 case study, and the acceptance list ending in "and more" — all framed as personal track record), problem section ("you probably don't need more resources"), simple 4-step methodology (Diagnose → Strategize → Execute → Optimize), services overview organized into the three pathways above with real prices, a distinct Future Physician section that visually stands apart (more premium/exclusive feel, application CTA not a buy button), final CTA section.
+2. **About / Meet Shua** — founder story, full credentials, 5+ years of combined admissions/MCAT coaching experience and 40-50+ students worked with, why the firm exists, honest "early firm, direct founder access" framing.
+3. **MCAT** (with the two MCAT offers, each can have its own short section or subpage) — include CARS positioning ("Stop outthinking CARS") since it's a differentiator, and reference the 99th percentile CARS score / 521 case study here as well.
+4. **Medical School Admissions** — the $7,500 offer in detail.
+5. **Future Physician** — dedicated page per the framing above, with the four engagement phases (Positioning, MCAT, Application, Interviews & Execution) and the application-required framing. State the real capacity limit directly: "Limited to 5 active clients at a time" — this is a genuine bandwidth constraint, not manufactured urgency, so state it plainly and confidently rather than hedging around it.
+6. **Results** — 5+ years / 40-50+ students up top, the 521 case study told properly (starting situation → challenge → intervention → result), plus the acceptance list, clearly attributed as Joshua's personal track record with a disclaimer that past outcomes don't guarantee future results.
+7. **Free Resources** — lead magnet page: CARS Strategy Guide + four high-yield subject sheets, each gated by an email capture form (leave `<!-- MAILERLITE EMBED GOES HERE -->` placeholders).
+8. **Book a Call** — free 15-minute consultation booking via Calendly (leave `<!-- CALENDLY EMBED GOES HERE -->` placeholder). Frame as a brief fit/diagnostic call, not a 45-60 minute free advising session.
+9. **Footer** (site-wide) — logo, nav, contact email placeholder, LinkedIn/Instagram placeholders.
+
+## Design direction
+
+- **Brand colors** (from the logo): Deep navy `#0B1B4D` (primary text, headers), Royal blue `#1E47D6` (accents, buttons, links), white/off-white background `#FFFFFF`/`#FAFAFA`. Use a subtle navy-to-blue gradient sparingly for accents, echoing the logo's monogram gradient.
+- **Logo**: interlocking double-S monogram (navy-to-blue gradient) + serif small-caps wordmark "SHUA | STRATEGIES" + tagline "Guiding the Next Generation of Physicians." I will upload the actual file directly in the Replit chat — leave `<!-- LOGO GOES HERE -->` placeholders in header and footer, and generate a favicon from the monogram once I upload it.
+- **Typography**: serif for headings/wordmark (Playfair Display, Cormorant, or EB Garamond), clean sans-serif for body (Inter or similar). Editorial/elegant, not corporate SaaS.
+- Generous whitespace, strong hierarchy, restrained color use, minimal visual clutter. Avoid stock photography clichés (no generic thumbs-up student photos), avoid cartoon education graphics, avoid dozens of competing CTAs on one page.
+- Fully responsive — most traffic will come from Instagram/LinkedIn on mobile.
+- Founder headshot placeholder on About page — I'll provide the real photo.
+
+## Integrations to stub out
+
+- MailerLite embed forms (home page opt-in + every lead magnet).
+- Calendly embed on the Book a Call page (free 15-min consultation only — not the paid tiers).
+- Google Analytics placeholder script tag.
+- Meta/Facebook Pixel placeholder script tag.
+- Stripe: leave clear placeholders/notes for where payment links or checkout buttons will go for the $600 and $2,000 tiers (I'll connect real Stripe payment links once set up). The $7,500 and $15,000 tiers should NOT have direct buy buttons — those route to "Book a Call" or the Future Physician application, since those engagements involve a conversation/application before payment.
+- Basic SEO: page titles, meta descriptions, Open Graph tags for every page. Domain is **shuastrategies.com** — use it in canonical URLs and `og:url` tags.
+
+## What NOT to do
+
+- Do not invent testimonials, quotes, or statistics beyond what's listed above.
+- Do not imply Shua Strategies has run multiple Future Physician engagements simultaneously at full capacity before — describe the program on its own terms (what it includes, how it works, the 5-client cap) without over- or under-selling its history.
+- Do not use fake urgency (countdown timers, invented scarcity) — the 5-client cap on Future Physician is real and should be stated plainly; don't dress it up with additional manufactured pressure tactics (e.g. no "only 2 spots left this month" ticking claims unless that's a real, current, verifiable number).
+- No user accounts, logins, or database — static site only.
+
+Remember: **wireframe and copy plan first, wait for my approval, then build.**
