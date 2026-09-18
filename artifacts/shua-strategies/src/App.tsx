@@ -1,5 +1,5 @@
 import { type ReactNode, useEffect, useLayoutEffect, useState } from 'react';
-import { ArrowUpRight, Check, Clock3, FileText, Instagram, Linkedin, Mail, Menu, MoveRight, ShieldCheck, Target, Users, X } from 'lucide-react';
+import { ArrowUpRight, Check, Clock3, Instagram, Linkedin, Mail, Menu, MoveRight, ShieldCheck, Target, X } from 'lucide-react';
 import { Link, Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 import { ErrorBoundary } from '@/components/error-boundary';
 import NotFound from '@/pages/not-found';
@@ -267,12 +267,55 @@ function Admissions() {
 }
 
 function FuturePhysician() {
-  usePageMeta('Future Physician Private Advising', 'Apply for Future Physician Private Advising, a limited 9–12 month engagement with Joshua Ward, MD.');
+  usePageMeta('Future Physician Private Advising', 'Apply for Future Physician Private Advising, a limited 9 to 12 month engagement with Joshua Ward, MD.');
+  const focusAreas: [string, string][] = [
+    ['ACADEMICS & POSITIONING', 'Course sequencing, academic strategy, gap-year planning, and long-term positioning.'],
+    ['RESEARCH & EXPERIENCES', 'Research, clinical experiences, service, leadership, extracurriculars, mentorship, and evaluating new opportunities.'],
+    ['MCAT', 'Study planning, resource selection, CARS strategy, full-length review, accountability, and adjustments throughout preparation.'],
+    ['APPLICATION STRATEGY', 'School-list development, positioning, personal statement, activities, and your overall application narrative.'],
+    ['SECONDARIES & WRITING', 'Brainstorming, detailed review, school-specific positioning, and maintaining a coherent voice throughout the application.'],
+    ['RECOMMENDATIONS & INTERVIEWS', 'Recommendation strategy, interview preparation, mock interviews, and individualized feedback.'],
+  ];
+  const workingTogether: [string, string][] = [
+    ['Regular strategy sessions', 'We meet throughout the engagement to review progress, plan ahead, and make the larger decisions together.'],
+    ['Between-session support', 'Questions don’t always arrive on schedule. You’ll have ongoing support between meetings for questions, drafts, updates, and decisions as they arise.'],
+    ['Support that matches the season', 'MCAT preparation, secondaries, and interview season can move quickly. We’ll meet more frequently when the process demands it.'],
+  ];
+  const phases: [string, string, string][] = [
+    ['01', 'Position', 'Build the academic, extracurricular, research, and personal foundation behind a compelling candidacy.'],
+    ['02', 'Prepare', 'Develop and execute an MCAT strategy built around your starting point, timeline, strengths, and weaknesses.'],
+    ['03', 'Apply', 'Turn your experiences into a coherent application through positioning, school-list strategy, writing, and secondaries.'],
+    ['04', 'Interview & execute', 'Prepare to communicate your story, navigate interview season, and make thoughtful decisions as opportunities arrive.'],
+  ];
   return <Shell><main>
-    <section className="page-hero"><div className="container-wide page-hero-grid"><div className="reveal"><Eyebrow>Comprehensive premed advising</Eyebrow><h1 className="display-lg" style={{ marginTop: 21 }}>The long arc deserves <span className="accent-italic">private attention.</span></h1><p className="body-lg muted">Future Physician Private Advising is a 9–12 month engagement for students who want one strategic relationship across academics, MCAT, application, and interviews.</p></div><div className="page-stamp reveal delay-2">5 ACTIVE<br />CLIENTS<br />APPLICATION REQUIRED</div></div></section>
-    <section className="section"><div className="container-wide premium-panel reveal"><div className="premium-grid"><div><Eyebrow light>Future Physician Private Advising</Eyebrow><h2>A steady hand across every phase.</h2><p className="copy">This is a limited, high-touch engagement. Joshua personally works with every client, and can support no more than 5 active clients at a time.</p><div className="premium-meta"><span>9–12 months</span><span>$15,000</span><span>Limited to 5 active clients at a time</span></div></div><div className="premium-side"><div className="premium-price">$15,000</div><p>Application required. Qualified applicants are invited to a private consultation before enrollment.</p><a href={FUTURE_PHYSICIAN_FORM_URL} target="_blank" rel="noreferrer" className="btn-primary" data-testid="link-future-apply">Apply for Future Physician Advising <ArrowUpRight size={15} /></a></div></div></div></section>
-    <section className="section section-soft"><div className="container-wide"><div className="split-heading reveal"><Eyebrow>Four engagement phases</Eyebrow><div><p className="manifesto">One relationship. The full premed arc.</p><p className="section-intro">The sequence is tailored to the student and the season. Each phase informs the next.</p></div></div><div className="phase-list" style={{ marginTop: 55 }}>{[['01', 'Positioning', 'Academics and extracurricular strategy that build a strong foundation and a coherent direction.'], ['02', 'MCAT', 'A personalized approach to preparation, resource use, full-lengths, and review.'], ['03', 'Application', 'Applicant narrative, primary, secondaries, and the decisions that make the file feel whole.'], ['04', 'Interviews & execution', 'Interview preparation and the steady execution required to carry the plan through.']].map(([num, title, copy]) => <div className="phase reveal" key={num}><div className="phase-num">{num}</div><div><h3>{title}</h3><p>{copy}</p></div></div>)}</div></div></section>
-    <section id="application" className="section"><div className="container-wide booking-grid"><div className="booking-aside reveal"><Eyebrow>Application required</Eyebrow><h2>Tell Joshua where you are headed.</h2><p>Share a little context on the short application. Joshua reviews every application personally; qualified applicants are invited to a private consultation, then enrollment.</p><ul className="promise-list"><li><Users size={15} />Limited to 5 active clients at a time</li><li><FileText size={15} />Short application, no performance</li><li><ShieldCheck size={15} />Private consultation before enrollment</li></ul></div><div className="booking-card reveal delay-1"><h2>Future Physician application</h2><p>This is an application, not a payment form.</p><a href={FUTURE_PHYSICIAN_FORM_URL} target="_blank" rel="noreferrer" className="btn-primary" data-testid="link-future-application-form">Apply for Future Physician Advising <ArrowUpRight size={15} /></a></div></div></section>
+    <section className="page-hero"><div className="container-wide page-hero-grid"><div className="reveal"><Eyebrow>Comprehensive premed advising</Eyebrow><h1 className="display-lg" style={{ marginTop: 21 }}>The long arc deserves<br /><span className="accent-italic">private attention.</span></h1><p className="body-lg muted">Future Physician is my most comprehensive advising program: a 9 to 12 month private engagement for students who want me personally involved across the entire path to medical school.</p><p className="body-lg muted">Academics. Research. MCAT. Applications. Interviews. When a decision matters, we work through it together.</p><div className="hero-actions" style={{ marginTop: 10 }}><CTA href={FUTURE_PHYSICIAN_FORM_URL}>Apply for Future Physician</CTA></div></div><div className="page-stamp reveal delay-2" style={{ fontSize: 15, letterSpacing: '.08em' }}>THE<br />WHOLE<br />PICTURE</div></div></section>
+    <section className="section"><div className="container-wide">
+      <div className="split-heading reveal"><Eyebrow>Private advising</Eyebrow><div><p className="manifesto">One advisor.<br />Every stage.</p><p className="section-intro">I’m in your corner for the entire premed process. I learn your goals, your strengths, where you are now, and where you’re trying to go. Then we keep building, adjusting, and executing together.</p><p className="section-intro">You work directly with me throughout the engagement, with advising built around what your path actually requires.</p></div></div>
+      <h3 className="pathway-title reveal" style={{ marginTop: 58, fontSize: 28 }}>Built around your path.</h3>
+      <div className="principles" style={{ marginTop: 28 }}>{focusAreas.map(([label, copy]) => <div className="principle reveal" key={label} data-testid={`card-focus-${label.slice(0, 4)}`}><span className="principle-number">{label}</span><p style={{ marginTop: 16 }}>{copy}</p></div>)}</div>
+      <p className="section-intro" style={{ marginTop: 34 }}>And throughout the engagement, we can address the other decisions that meaningfully affect your path to medical school.</p>
+      <h3 className="pathway-title reveal" style={{ marginTop: 58, fontSize: 28 }}>What working together looks like.</h3>
+      <div className="trio-grid">{workingTogether.map(([label, copy]) => <div className="case-step reveal" key={label}><strong>{label}</strong><span>{copy}</span></div>)}</div>
+    </div></section>
+    <section className="section section-soft"><div className="container-wide"><div className="split-heading reveal"><Eyebrow>The long arc</Eyebrow><div><p className="manifesto">One relationship.<br />The full premed journey.</p><p className="section-intro">The sequence changes with the student and the season. The relationship stays consistent.</p></div></div><div className="phase-list" style={{ marginTop: 55 }}>{phases.map(([num, title, copy]) => <div className="phase reveal" key={num}><div className="phase-num">{num}</div><div><h3>{title}</h3><p>{copy}</p></div></div>)}</div></div></section>
+    <section className="section section-blue"><div className="container-wide"><div className="split-heading reveal"><Eyebrow light>The Future Physician commitment</Eyebrow><div><p className="manifesto">Medical School<br /><em>Admission Guarantee.</em></p><p className="section-intro" style={{ color: 'rgba(255,255,255,.7)' }}>Eligible Future Physician clients receive the Medical School Admission Guarantee.</p><p className="section-intro" style={{ color: 'rgba(255,255,255,.7)' }}>If you fulfill the program requirements and do not earn a medical school acceptance during your application cycle, I’ll continue advising you through the following application cycle at no additional advising cost.</p><p style={{ marginTop: 20, maxWidth: 565, fontSize: 11, lineHeight: 1.6, color: 'rgba(255,255,255,.5)' }}>*Guarantee contingent upon meeting eligibility and program requirements. Full terms are provided before enrollment.</p></div></div></div></section>
+    <section id="application" className="section"><div className="container-wide advising-layout">
+      <aside className="advising-aside reveal"><Eyebrow>Application required</Eyebrow><h2>Tell me where you are.<br /><span className="accent-italic">And where you want to go.</span></h2><p>Future Physician is limited to five active students so I can stay personally involved in every engagement.</p><p>Start with a short application. I’ll review where you are, what you’re working toward, and whether we’re early enough in the process to do meaningful work together. If it looks like a strong fit, we’ll talk privately about the program, expectations, and what working together would look like before you make any commitment.</p></aside>
+      <div className="reveal delay-1"><div className="price-box">
+        <h3>Future Physician Private Advising</h3>
+        <div className="large-price">$15,000</div>
+        <div className="detail-list">
+          <div><Check size={15} />9 to 12 months</div>
+          <div><Check size={15} />Direct advising with Joshua</div>
+          <div><Check size={15} />Medical School Admission Guarantee*</div>
+          {/* UPDATE: spots remaining */}
+          <div><Check size={15} />3 of 5 spots remaining</div>
+        </div>
+        <CheckoutCTA href={FUTURE_PHYSICIAN_FORM_URL} action="Apply for Future Physician Advising" />
+        <p className="muted" style={{ fontSize: 11, marginTop: 16, lineHeight: 1.6 }}>*Admission Guarantee available to eligible clients and contingent upon program requirements. Full terms are provided before enrollment.</p>
+        <p className="muted" style={{ fontSize: 11, marginTop: 8, lineHeight: 1.6 }}>Applying does not commit you to enrollment.</p>
+      </div></div>
+    </div></section>
   </main></Shell>;
 }
 
